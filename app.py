@@ -74,6 +74,8 @@ def store_data_in_chroma():
                     metadatas=[{"question": question, "answer": answer}]
                 )
         st.write("✅ Embeddings stored successfully!")
+else:
+   st.write("working")
 
 # Function to retrieve the most relevant answer
 def get_best_answer(query):
