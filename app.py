@@ -34,8 +34,8 @@ GENAI_API_KEY = os.getenv("GENAI_API_KEY")
 genai.configure(api_key=GENAI_API_KEY)
 
 # Initialize ChromaDB
-DB_PATH = "./chroma_db"
-chroma_client = chromadb.PersistentClient(path=DB_PATH)
+#DB_PATH = "./chroma_db"
+#chroma_client = chromadb.PersistentClient(path=DB_PATH)
 collection = chroma_client.get_or_create_collection(name="qa_collection")
 
 # Load CSV Data
