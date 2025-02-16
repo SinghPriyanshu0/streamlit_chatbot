@@ -13,7 +13,11 @@ except ImportError:
     print("pysqlite3 is not installed, using system sqlite3")
 
 
+from chromadb.config import Settings
 import chromadb
+
+# Initialize ChromaDB with settings
+chroma_client = chromadb.PersistentClient(Settings())
 
 
 
