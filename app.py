@@ -18,7 +18,7 @@ import chromadb
 # Initialize ChromaDB with settings
 
 from chromadb.config import Settings
-chroma_client = chromadb.PersistentClient("./chroma_db")
+chroma_client = chromadb.PersistentClient("./chroma_db",allow_reset=True)
 
 # Force a schema update
 chroma_client.reset()
