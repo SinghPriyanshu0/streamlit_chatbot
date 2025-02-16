@@ -1,9 +1,21 @@
 import streamlit as st
 import pandas as pd
-import chromadb
 import google.generativeai as genai
 import os
 from dotenv import load_dotenv
+import sys
+
+# Ensure the correct SQLite version is used
+try:
+    import pysqlite3
+    sys.modules["sqlite3"] = pysqlite3
+except ImportError:
+    print("pysqlite3 is not installed, using system sqlite3")
+
+
+import chromadb
+
+
 
 # Load environment variables
 load_dotenv()
