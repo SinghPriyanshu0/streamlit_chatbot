@@ -4,6 +4,8 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 import sys
+import chromadb
+from chromadb.config import Settings
 
 # Ensure the correct SQLite version is used
 try:
@@ -13,13 +15,7 @@ except ImportError:
     print("pysqlite3 is not installed, using system sqlite3")
 
 
-import chromadb
-
-# Initialize ChromaDB with settings
-
-from chromadb.config import Settings
-
-settings = Settings(persist_directory="./chroma_db", allow_reset=True)
+settings = Settings(persist_directory="./chroma_db")
 chroma_client = chromadb.PersistentClient(settings=settings)
 
 # Load environment variables
