@@ -17,7 +17,7 @@ from chromadb.config import Settings
 import chromadb
 
 # Initialize ChromaDB with settings
-chroma_client = chromadb.PersistentClient(Settings())
+chroma_client = chromadb.Client(Settings())
 
 
 
