@@ -84,7 +84,7 @@ def get_best_answer(query):
 
 # Function to refine the response using Gemini
 def refine_with_gemini(context):
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-1.5-pro-latest")
     response = model.generate_content(f"Refine and simplify this response: {context}")
     return response.text if response.text else context
 
